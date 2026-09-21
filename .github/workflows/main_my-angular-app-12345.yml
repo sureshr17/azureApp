@@ -39,6 +39,7 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           echo "Repository owner: ${{ github.repository_owner }}"
           echo "Repository ID: ${{ github.event.repository.id }}"
+          echo "Organization ID: ${{ github.event.repository.owner.id }}"
           echo "Ref: ${{ github.ref }}"
           echo "SHA: ${{ github.sha }}"
           echo "Workflow: ${{ github.workflow }}"
