@@ -3,6 +3,9 @@
 
 name: Build and deploy Node.js app to Azure Web App - my-angular-app-12345
 
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
 on:
   push:
     branches:
@@ -68,7 +71,7 @@ jobs:
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v4
         with:
           app-name: 'my-angular-app-12345'
           slot-name: 'Production'
